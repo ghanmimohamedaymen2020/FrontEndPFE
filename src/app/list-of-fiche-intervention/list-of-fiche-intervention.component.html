@@ -1,38 +1,36 @@
 <mat-card class="card">
     <mat-card-header>
-        <mat-card-title> Tableau de suivi des réclamations
-        </mat-card-title>
+        <mat-card-title> Users List </mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col"> Date</th>
-                <th scope="col">Référence NC</th>
-                <th scope="col">Détéctée par</th>
-                <th scope="col">Client </th>
-                <th scope="col">Commentaires </th>
-                <th scope="col">Action immédiate </th>
-                <th scope="col">Action d’amélioration </th>
 
+    <table class="table table-hover table-dark">
+        <thead color="primery ">
+            <tr>
+                <th>PROG</th>
+                <th>actionsRealisees</th>
+                <th>Constats</th>
+                <th>DetailInvestigations</th>
+                <th>CauseIncident</th>
+                <th>ConsequencesIncident</th>
+                <th>DureeIncident</th>
+                <th>StatutResolution</th>
 
 
             </tr>
-            <!-- </thead>
-                <tbody *ngFor="let ficheIntervention of ficheInterventions">
-                    <td>{{ ficheIntervention.id}} </td>
-                    <td> {{ ficheIntervention.actionsRealisees}} </td>
-                    <td>{{ ficheIntervention.Constats }} </td>
-                    <td>{{ ficheIntervention.DetailInvestigations}} </td>
-                    <td>{{ ficheIntervention.CauseIncident }} </td>
-                    <td>{{ ficheIntervention.ConsequencesIncident }} </td>
-                    <td>{{ ficheIntervention.DureeIncident }} </td>
-                    <td>{{ ficheIntervention.StatutResolution }} </td>
- -->
+        </thead>
+        <tbody>
+            <tr *ngFor=" let ficheIntervention of ficheInterventions ">
+                <td>{{ficheIntervention.prog}}</td>
+                <td>{{ficheIntervention.actionsRealisees }}</td>
+                <td>{{ficheIntervention.constats}}</td>
+                <td>{{ficheIntervention.detailInvestigations}}</td>
+                <td>{{ficheIntervention.causeIncident}}</td>
+                <td>{{ficheIntervention.consequencesIncident}}</td>
+                <td>{{ficheIntervention.dureeIncident}}</td>
+                <td>{{ficheIntervention.statutResolution}}</td>
 
-            <!-- 
-                    </tbody>
-            </table>
-        </mat-card> -->
+    </table>
 
 
-            <p>Hjkqwgbxchjkbwxk</p>
+</mat-card>

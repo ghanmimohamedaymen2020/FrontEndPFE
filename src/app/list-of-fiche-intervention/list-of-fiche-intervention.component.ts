@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FicheIntervention } from '../Models/fiche-intervention';
 import { FicheInterventionService } from '../services/fiche-intervention.service';
 
 @Component({
@@ -7,12 +8,17 @@ import { FicheInterventionService } from '../services/fiche-intervention.service
   styleUrls: ['./list-of-fiche-intervention.component.css']
 })
 export class ListOfFicheInterventionComponent implements OnInit {
-
+  ficheInterventions : FicheIntervention[] ; 
   constructor(private ficheInterventionService : FicheInterventionService) { }
 
   ngOnInit(): void {
+    this.getFicheIntervention() ;
+
   }
-  
+  private getFicheIntervention(){
+   this.ficheInterventionService.getListFicheIntervention().subscribe(data=>
+     this.ficheInterventions = data 
+   )}
 
 }
 

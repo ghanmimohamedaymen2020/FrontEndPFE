@@ -1,15 +1,16 @@
 export class FicheIntervention {
 
-      id : number ;
 
-
-      PROG :string ;
-      actionsRealisees : string ;
-      Constats : string;
-      DetailInvestigations :string ;
-      CauseIncident :string;
-      ConsequencesIncident  : string;
-      DureeIncident : string;
-      StatutResolution :string;
+      
+      
+      id: number ;
+      prog : String ;
+      actionsRealisees:String ;
+      detailInvestigations : String ;
+      statutResolution : String ;
+      consequencesIncident : String ;
+      causeIncident : String ;
+      constats : String ;
+      dureeIncident : String ;
      
 }

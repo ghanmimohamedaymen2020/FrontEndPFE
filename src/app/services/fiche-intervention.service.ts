@@ -7,13 +7,12 @@ import { FicheIntervention } from '../Models/fiche-intervention';
   providedIn: 'root'
 })
 export class FicheInterventionService {
-  private  baseUrlFicheIntervention :"http://localhost:8080/ ";
 
   constructor(private http : HttpClient) { }
 
-getListFicheIntervention():Observable<FicheIntervention[]> {
-
-  return this.http.get<FicheIntervention[]>("http://localhost:8080/ListOfFichesInterventions/ ");
+public getListFicheIntervention():Observable<FicheIntervention[]> {
+console.log(this.http.get<FicheIntervention[]>("http://localhost:8082/FichesIntevention"));
+  return this.http.get<FicheIntervention[]>("http://localhost:8082/FichesIntevention");
   
 
 
