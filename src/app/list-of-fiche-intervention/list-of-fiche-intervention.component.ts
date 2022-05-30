@@ -9,6 +9,11 @@ import { FicheInterventionService } from '../services/fiche-intervention.service
 })
 export class ListOfFicheInterventionComponent implements OnInit {
   ficheInterventions : FicheIntervention[] ; 
+
+  items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+  expandedIndex = 0;
+
+
   constructor(private ficheInterventionService : FicheInterventionService) { }
 
   ngOnInit(): void {

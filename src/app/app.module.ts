@@ -26,6 +26,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ListOfFicheInterventionComponent
   ],
   imports: [
+    CdkAccordionModule,
     BrowserModule,
     AppRoutingModule,
     MatExpansionModule,
