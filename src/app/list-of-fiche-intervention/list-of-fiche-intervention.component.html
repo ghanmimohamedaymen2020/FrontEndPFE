@@ -1,53 +1,14 @@
-<mat-card class="card">
-    <mat-card-header>
-        <mat-card-title> Users List </mat-card-title>
-        <mat-card-subtitle></mat-card-subtitle>
-    </mat-card-header>
-
-    <table class="table table-hover table-dark">
-        <thead color="primery ">
-            <tr>
-                <th>PROG</th>
-                <th>actionsRealisees</th>
-                <th>Constats</th>
-                <th>DetailInvestigations</th>
-                <th>CauseIncident</th>
-                <th>ConsequencesIncident</th>
-                <th>DureeIncident</th>
-                <th>StatutResolution</th>
-
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor=" let ficheIntervention of ficheInterventions ">
-                <td>{{ficheIntervention.prog}}</td>
-                <td>{{ficheIntervention.actionsRealisees }}</td>
-                <td>{{ficheIntervention.constats}}</td>
-                <td>{{ficheIntervention.detailInvestigations}}</td>
-                <td>{{ficheIntervention.causeIncident}}</td>
-                <td>{{ficheIntervention.consequencesIncident}}</td>
-                <td>{{ficheIntervention.dureeIncident}}</td>
-                <td>{{ficheIntervention.statutResolution}}</td>
-
-    </table>
-
-
-</mat-card>
-
-
-
 <cdk-accordion class="example-accordion">
     <cdk-accordion-item *ngFor="let ficheIntervention of ficheInterventions; let index = index;" #accordionItem="cdkAccordionItem" class="example-accordion-item" role="button" tabindex="0" [attr.id]="'accordion-header-' + index" [attr.aria-expanded]="accordionItem.expanded"
         [attr.aria-controls]="'accordion-body-' + index">
         <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
-            {{ ficheIntervention.prog }}
+            <h4> Fiche Intervention N </h4>{{ ficheIntervention.id }}
             <span class="example-accordion-item-description">
-        {{ accordionItem.expanded ? 'close' : 'mor' }}
+         {{ accordionItem.expanded ? 'close' : 'mor' }}
       </span>
         </div>
         <div class="example-accordion-item-body" role="region" [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
-            <span><h4>PROG</h4></span>
+            <span><h3>PROG</h3></span>
             <p>{{ficheIntervention.prog}}</p>
             <span><h4>Constats</h4></span>
             <p>{{ficheIntervention.constats}}</p>
@@ -63,26 +24,8 @@
             <p>{{ficheIntervention.dureeIncident}}</p>
             <span> <h4>statutResolution</h4></span>
             <p>{{ficheIntervention.statutResolution}}</p>
+            <button (click)="updateFicheIntervention(ficheIntervention.id) " class="btn btn-info ">Update</button>
 
         </div>
     </cdk-accordion-item>
 </cdk-accordion>
-
-
-
-
-
-<table>
-    <tr>
-        <p>Composant impacté : AMPLITUDE Date Réclamation : 13/01/2022 Domaine : TFJ /COMPTA
-        </p>
-    </tr>
-    <tr>
-        <p>
-            Constats : Lors du TFJ du 13/01/2022, le tfjo est interrompu au niveau programme CENTRALIS : Un message d’erreur : « Montant négatif non autorise CC620098878 7225130010 -72,93 00010 ». Détail investigations : Problème de donnée dans la table bkmvti Cause
-            de l’Incident : Données intégrés avec des champs qui ne respecte pas la structure de la table bkmvti, champs vide et montant avec des signes (-) . Conséquences de l’incident : Programme bloqué pour 80 minutes de 22H:28 jusqu’à 23H:40 Durée
-            de l’incident : 80 minutes
-
-        </p>
-    </tr>
-</table>

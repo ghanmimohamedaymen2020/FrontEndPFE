@@ -25,9 +25,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { SaveFichInterventionToPDFComponent } from './save-fich-intervention-to-pdf/save-fich-intervention-to-pdf.component';
+import { AddFicheInterventionComponent } from './add-fiche-intervention/add-fiche-intervention.component';
 
 
 
@@ -35,14 +35,14 @@ import { SaveFichInterventionToPDFComponent } from './save-fich-intervention-to-
   declarations: [
     AppComponent,
     ListOfFicheInterventionComponent,
-    SaveFichInterventionToPDFComponent
+    SaveFichInterventionToPDFComponent,
+    AddFicheInterventionComponent
   ],
   imports: [
     CdkAccordionModule,
     BrowserModule,
     AppRoutingModule,
     MatExpansionModule,
-    MatCardModule,
     MatCardModule,
     MatSidenavModule,
     MatListModule,

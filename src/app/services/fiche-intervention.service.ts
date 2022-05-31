@@ -22,7 +22,7 @@ updateFicheIntervention(id : number):Observable<FicheIntervention[]>{
 }
 
 createFicheIntervention(FicheIntervention : FicheIntervention): Observable<Object>{
-  return this.http.post("http://localhost:8080",FicheIntervention)
+  return this.http.post("http://localhost:8082/addNewFicheIntervention",FicheIntervention)
 
 }
 getFicheInterventionById(id:number): Observable<FicheIntervention>{

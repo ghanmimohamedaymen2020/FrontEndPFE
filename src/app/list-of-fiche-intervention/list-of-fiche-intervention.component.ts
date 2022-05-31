@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FicheIntervention } from '../Models/fiche-intervention';
 import { FicheInterventionService } from '../services/fiche-intervention.service';
 
@@ -14,7 +15,7 @@ export class ListOfFicheInterventionComponent implements OnInit {
   expandedIndex = 0;
 
 
-  constructor(private ficheInterventionService : FicheInterventionService) { }
+  constructor(private ficheInterventionService : FicheInterventionService ,private route : Router) { }
 
   ngOnInit(): void {
     this.getFicheIntervention() ;
@@ -24,6 +25,10 @@ export class ListOfFicheInterventionComponent implements OnInit {
    this.ficheInterventionService.getListFicheIntervention().subscribe(data=>
      this.ficheInterventions = data 
    )}
+
+   updateFicheIntervention(id : number){
+    this.route.navigate(['update-user/',id])
+  }
 
 }
 
