@@ -11,8 +11,8 @@ export class FicheInterventionService {
   constructor(private http : HttpClient) { }
 
 public getListFicheIntervention():Observable<FicheIntervention[]> {
-console.log(this.http.get<FicheIntervention[]>("http://localhost:8082/FichesIntevention"));
-  return this.http.get<FicheIntervention[]>("http://localhost:8082/FichesIntevention");
+console.log(this.http.get<FicheIntervention[]>("http://localhost:8082/ListOfFichesInterventions"));
+  return this.http.get<FicheIntervention[]>("http://localhost:8082/ListOfFichesInterventions");
   
 
 
@@ -29,4 +29,9 @@ getFicheInterventionById(id:number): Observable<FicheIntervention>{
   console.log(id)
   return this.http.get<FicheIntervention>(`http://localhost:8080/${id}`)
 }
-}
+
+
+
+saveFicheInterventionToPDF(){
+  
+}}

@@ -27,13 +27,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { SaveFichInterventionToPDFComponent } from './save-fich-intervention-to-pdf/save-fich-intervention-to-pdf.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListOfFicheInterventionComponent
+    ListOfFicheInterventionComponent,
+    SaveFichInterventionToPDFComponent
   ],
   imports: [
     CdkAccordionModule,
